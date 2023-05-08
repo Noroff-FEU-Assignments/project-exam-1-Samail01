@@ -165,4 +165,45 @@ body {
 
 /*Contact us page styling END */
 
+/* Home Page slider for Blogs */
+
+.blog-slider {
+    background-color: blue;
+    height: 30rem;
+}
+
+.blog-category {
+
+}
+
+.prv-btn {
+
+}
+
+.nxt-btn {
+
+}
+
+.blog-card {
+  display: flex;
+
+  outline: 1px dashed green;
+  overflow: scroll;
   
+
+}
+
+.slide {
+flex: 1 0 100%;
+width: 100%;
+}
+  
+.blog-card:nth-child(1) {
+  background-color: orange;
+}
+.blog-card:nth-child(2) {
+  background-color: rgb(255, 0, 179);
+}
+.blog-card:nth-child(3) {
+  background-color: rgb(255, 0, 0);
+}

@@ -1,3 +1,16 @@
+//Code for Home page.
+const url = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia";
+const pageOne = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?page=2";
+
+fetch(url)
+
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+})
+.catch(error => console.error(error));
+
+
 //Code start for Hamburger menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -58,3 +71,6 @@ const form = document.getElementById('contact-form');
     }
   });
 //Code END for REGEX ON CONTACT PAGE
+
+
+
