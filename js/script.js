@@ -1,17 +1,46 @@
 //Code for Home page.
-const url = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia";
+const url = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=10";
 const pageOne = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?page=2";
+const blogContainer = document.getElementById("blog-container");
+const slider = document.querySelector('.slider')
 
 fetch(url)
-
-.then(response => response.json())
-.then(data => {
+  .then(response => response.json())
+  .then(data => {
     console.log(data)
-})
-.catch(error => console.error(error));
+    listBlogPosts(data);
+  })
+  .catch(error => console.error(error));
+
+export function listBlogPosts(data) {
+
+  slider.innerHTML = "";
+
+  data.forEach(post => {
+    const {
+      id, title, excerpt, date, _embedded
+    } = post;
+
+    const featured_image = _embedded["wp:featuredmedia"][0].source_url;
+    const formatted_date = moment(date).format("MMMM Do, YYYY");
 
 
-//Code start for Hamburger menu
+    slider.innerHTML += `
+          <div class="card">
+            <img src="${featured_image}" alt="" class="card-img" />
+            <h3 class="card-title">${title.rendered}</h3>
+            <span class="card-date">${formatted_date}</span>
+            <p class="card-description">${excerpt.rendered}</p>
+          </div>
+    `;
+
+  });
+}
+
+
+
+
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -23,54 +52,4 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active")
-}))
-
-//Code END for hamburger menu
-
-//Code start for REGEX ON CONTACT PAGE
-const form = document.getElementById('contact-form');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const subjectInput = document.getElementById('subject');
-  const messageInput = document.getElementById('message');
-
-  const nameRegex = /^[a-zA-Z\s]*$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function validateName() {
-    if (!nameRegex.test(nameInput.value)) {
-      nameInput.setCustomValidity('Please enter a valid name');
-    } else {
-      nameInput.setCustomValidity('');
-    }
-  }
-
-  function validateEmail() {
-    if (!emailRegex.test(emailInput.value)) {
-      emailInput.setCustomValidity('Please enter a valid email address');
-    } else {
-      emailInput.setCustomValidity('');
-    }
-  }
-
-  nameInput.addEventListener('input', validateName);
-  emailInput.addEventListener('input', validateEmail);
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    if (form.checkValidity()) {
-      // Send form data to server
-      alert('Form submitted successfully!');
-      form.reset();
-    } else {
-      nameInput.reportValidity();
-      emailInput.reportValidity();
-      subjectInput.reportValidity();
-      messageInput.reportValidity();
-    }
-  });
-//Code END for REGEX ON CONTACT PAGE
-
-
-
+}));

@@ -10,6 +10,17 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active")
-}))
+}));
 
-//Code END for hamburger menu
+
+//Code for slider
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    listBlogPosts(data);
+  })
+  .catch(error => console.error(error));
+
+import { listBlogPosts } from "./script";
+const slider = document.querySelector(".slider");

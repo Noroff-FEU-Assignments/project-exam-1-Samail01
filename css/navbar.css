@@ -5,7 +5,15 @@
 }
 
 header {
+  background-color: black;
+}
+
+.header {
     background-color: black;
+    background-image: url(/media/exam-background-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 li {

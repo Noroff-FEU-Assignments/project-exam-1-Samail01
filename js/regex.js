@@ -1,5 +1,4 @@
-export function validateName();
-export function validateEmail();
+
 
 //Code start for REGEX ON CONTACT PAGE
 const form = document.getElementById('contact-form');

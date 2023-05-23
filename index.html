@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Designer4U</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/components.js" type="module"></script>
     <script src="./js/script.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/155a3ba382.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   </head>
-  <body>
-    <header>
+  <body class="index-body">
+    <header class="header">
       <nav class="navbar">
         <a href="./index.html" class="logo">Designer4U</a>
         <ul class="nav-menu">
@@ -33,28 +39,10 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <div class="main-top">
-        <img
-          src="./media/exam-background-pic.jpg"
-          alt="Picture of mannequins"
-          class="background-image"
-        />
-        <h2 class="slogan">Luxury, For The Woman And Men Who Deserve IT</h2>
-      </div>
-      <div class="blog-slider">
-        <h2 class="blog-category">Blogs</h2>
-        <button class="prv-btn">
-          <img src="./media/arrow.png" alt="arrow" />
-        </button>
-        <button class="next-btn">
-          <img src="./media/arrow.png" alt="arrow" />
-        </button>
-        <div class="blog-card">
-          <div class="slide">1</div>
-          <div class="slide">2</div>
-          <div class="slide">3</div>
-        </div>
+      <div class="slider-container">
+        <div class="slider"></div>
       </div>
     </main>
 
