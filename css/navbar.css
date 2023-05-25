@@ -11,6 +11,7 @@ header {
 .header {
     background-color: black;
     background-image: url(/media/exam-background-pic.jpg);
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -101,6 +102,7 @@ a {
         width: 100%;
         text-align: center;
         transition: 0.3s
+        
     }
 
     .nav-item {

@@ -3,16 +3,21 @@ const url = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredm
 const pageOne = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?page=2";
 const blogContainer = document.getElementById("blog-container");
 const slider = document.querySelector('.slider')
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id")
+
+
 
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    console.log(data)
+
     listBlogPosts(data);
   })
   .catch(error => console.error(error));
 
-export function listBlogPosts(data) {
+function listBlogPosts(data) {
 
   slider.innerHTML = "";
 
@@ -31,6 +36,7 @@ export function listBlogPosts(data) {
             <h3 class="card-title">${title.rendered}</h3>
             <span class="card-date">${formatted_date}</span>
             <p class="card-description">${excerpt.rendered}</p>
+            <a href="specific.html?id=${id}" class="read-post-button">Read post</a>
           </div>
     `;
 

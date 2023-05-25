@@ -1,3 +1,5 @@
+import { listBlogPosts } from "./script";
+
 //Code start for Hamburger menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -12,15 +14,14 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active")
 }));
 
-
+const url = "https://www.sampug.no/exam1/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=20";
 //Code for slider
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    console.log(data)
-    listBlogPosts(data);
+    /* listBlogPosts(data); */
   })
   .catch(error => console.error(error));
 
-import { listBlogPosts } from "./script";
+
 const slider = document.querySelector(".slider");
