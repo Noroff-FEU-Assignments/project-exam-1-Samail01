@@ -20,4 +20,4 @@ Alt i alt vil jeg si at oppgaven gikk bra, problemer må man forvente når man k
 
 Jeg har lært veldig mye, jeg kunne ingenting om både slider, modul og vis mer knapp. Så at vi trengte disse på oppgaven var bra, så fikk vi lært det åsså. Disse er noe jeg 100% kommer til å bruke til andre nettsider jeg lager.
 
-Det jeg må bli bedre på er å ha mer ren kode, jobbe mer med layout, og lære å forkorte javascript kode. Disse er ting jeg skal jobbe videre med for å forbedre mitt potensialet.
+Det jeg må bli bedre på er å ha mer ren kode, jobbe mer med layout, og lære å forkorte javascript kode. Disse er ting jeg skal jobbe videre med for å forbedre mitt potensialet. Jeg lagde også en trello tabell som jeg egentlig skulle følge men fallt av. Så må bli bedre på å lære meg å følge den.
