@@ -1,78 +1,23 @@
-## Project Exam 1
+Rapport Samail Pugaev
 
-## Goal
+All tekst i oppgaven er skrevet av chatGPT.
 
-To put into practice the skills learned over your first year of studies.
+Denne eksamen omhandlet at vi skulle lage blogger i Wordpress å hente de ut med Javascript for å lage en funksjonell nettside. Jeg valgte å lage en blogg side om designer merker pga det er noe som innterriserer meg. Målgruppen for siden min er folk som innterreserer seg for designer merker, altså folk som liker designer klær, sko og tilbehør (Klokker, Solbriller, Armbånd osv ...). Jeg løste oppgaven med å lage design først, og deretter kodet jeg.
 
-## Brief
+Hjem siden: På hjem siden min skulle jeg egentlig ha svart bagrunnsfarge på headeren men, men merket fort at det så bedre ut med bare bakgrunnsbilde over hele. Slideren er contenete for hjem siden hvor folk kan se noen av bloggene som er på siden. Enkelt og greit ett basic layout.
 
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
+Blog siden: Blog list siden min var også ganske basic, hvor jeg brukte grids for å vise kortene, kortene viser bilde, tittel, år og en read post knapp om folk ville lese mer om det spesifikke merket. For å hente ut kortene brukte jeg en metode vi lærte tidlig på Javascript 1 courset, hvor jeg lager element og gir ut med appendChild. Jeg brukte også en if statement i koden for å kun vise 5 poster først for så at man kan trykke "view more" knapp for å få ut de resterende bloggene.
 
-- Home page
-- About page
-- List of blog posts
-- Blog post specific pages
-- Contact page.
+Spesifikk blog side: Her hadde jeg en del problemer, når jeg først fikk ut koden, fikk jeg ut alt jeg hadde på wordpress siden uten å ha skrevet at jeg ville ha det med. Med dette gjorde jeg noen endringer i wordpress blog sidene, der jeg fjernet ett bilde så det kun var ett igjen, hadde egentlig to bilder der. Etter denne endringen var det lettere å gjøre siden responsiv og siden så bedre ut. Å få til Modul på bildene var åsså litt strevende, til slutt fikk jeg det til. Problemet var med eventlistener, jeg fannt ut at eventlisteneren måtte være under funksjonen slik at openModul funksjonen blir definert først, før eventlisteneren er lagt til.
 
-### Home Page
+Om siden: Her er det ikke noe spessielt, en helt enkel om side med bilde og tekst
 
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+Kontakt siden: Kontakt siden har litt tekst, samt en form, som har med "Name, Email, Subject and Message" som oppgaven sier at vi skal ha. Regex er også brukt, jeg hadde Regex fra en annen oppgave så brukte den, for å huske Regex er ikke så lett.
 
-### Blog Page
+Oppsummering:
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+Alt i alt vil jeg si at oppgaven gikk bra, problemer må man forvente når man koder, skulle ønsket jeg jobbet mer enn det jeg gjorde med oppgaven. Ble ferdig med figma og wordpress første dagen så ble for avslappet og plutselig gikk tiden.
 
-### Blog Specific Page
+Jeg har lært veldig mye, jeg kunne ingenting om både slider, modul og vis mer knapp. Så at vi trengte disse på oppgaven var bra, så fikk vi lært det åsså. Disse er noe jeg 100% kommer til å bruke til andre nettsider jeg lager.
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
-
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
-
-### Contact page
-
-Create a contact us page, there should be 4 textboxes on this page.
-
-- Name (Should be more than 5 characters long)
-- Email address (Must be a valid email address)
-- Subject (Should be more than 15 characters long)
-- Message content (Should be more than 25 characters long)
-
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
-
-### WordPress
-
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data.
-
-The project has two aspects:
-
-- API from your WordPress installation
-- Your website built with HTML, CSS and JavaScript
-
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
-
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
-
-## Level 1 Process
-
-1. Decide on the theme for the blog you’re going to make
-2. Create a prototype of the website
-3. Install WordPress on your web host and add the blogs on the admin panel.
-4. Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5. Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6. Install Hotjar on your website.
-7. Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8. Write a report documenting your project (template provided in this repository).
-9. Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
-
-## Level 2 Process (optional)
-
-1. You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for.
-2. Post the data from the contact form to WordPress so you have the details saved.
-3. Allow users to submit comments on a blog post, and post this data to WordPress
-
-Rapport:
-Skriv 2 avsnitt om hvordan du forsto oppgaven.
-
-forklar hva du har valgt og hvorfor, enkelt og konkret.
-
-hvordan gikk det, hva har du lært, hva gikk dårlig osv...
+Det jeg må bli bedre på er å ha mer ren kode, jobbe mer med layout, og lære å forkorte javascript kode. Disse er ting jeg skal jobbe videre med for å forbedre mitt potensialet.
