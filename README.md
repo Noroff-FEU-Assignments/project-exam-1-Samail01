@@ -1,6 +1,6 @@
 Rapport Samail Pugaev
 
-All tekst i oppgaven er skrevet av chatGPT.
+Tekst på spesific, about og contact er generert av chatGPT.
 
 Denne eksamen omhandlet at vi skulle lage blogger i Wordpress å hente de ut med Javascript for å lage en funksjonell nettside. Jeg valgte å lage en blogg side om designer merker pga det er noe som innterriserer meg. Målgruppen for siden min er folk som innterreserer seg for designer merker, altså folk som liker designer klær, sko og tilbehør (Klokker, Solbriller, Armbånd osv ...). Jeg løste oppgaven med å lage design først, og deretter kodet jeg.
 
